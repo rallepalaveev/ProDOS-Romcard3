@@ -7,6 +7,7 @@ If a user program is accessing the card, it is important that at the end a write
 The bootloader is programmed in the 256 bytes at address $00200 of the ROM chip.
 The boot loader is always available at addresses $CM00-$CMFF, where M = [slot number].
 The bootloader can also be seen at addresses $CA00-$CAFF of bank #0000.
+The card is pre-loaded with ProDOS, programs and games. It is bootable and if it is the first boot device encountered, it will boot into ProDOS and a menu will appear of the programs pre-loaded. Tab can be pressed before cold-reset to omit the card from the boot sequence.
 
 Copyright (c) 2023 Ralle Palaveev All rights reserved.
 
