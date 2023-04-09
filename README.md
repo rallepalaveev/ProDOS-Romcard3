@@ -1,4 +1,4 @@
-# romcard3
+# ProDOS-Romcard3
 The ROMcard3 is a card intended tor Apple II computers and is intended to work with a single EPROM 27C322.
 The ROM is organized in 2048 banks of 2kB each, numbered #0000 to #1FFF Banks are selected by writing a byte (#0000 - #1FFF) into $C0N0 and $C0N1, where N = 8 + [slot number].
 When writing to $C0Nx at the same time the ROM chip is also enabled. 
