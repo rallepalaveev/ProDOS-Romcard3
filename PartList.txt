@@ -1,0 +1,8 @@
+1 x 27C322
+2 x 74LS374
+2 x 74LS244
+1 x 74LS74
+1 x ATF22V10C
+2 x RN 8 x 1.0k
+7 x 10nF
+1 x 100uF
