@@ -4,7 +4,7 @@ The ROM is organized in 2048 banks of 2kB each, numbered #0000 to #1FFF Banks ar
 When writing to $C0Nx at the same time the ROM chip is also enabled. 
 When a bank is selected, its content are seen in the address space $C800-$CFFF To de-enable the ROM chip a write must be performed to any address $C800-$CFFF or reset executed.
 If a user program is accessing the card, it is important that at the end a write is performed to $C800-$CFFF so that the card is deactivated and does not conflict with other hardware, which is using the same address space.
-The bootloader is programmed in the 256 bytes at address $00200 of the ROM chip.
+The bootloader is programmed in the 128 double-bytes at address $00100 of the ROM chip.
 The boot loader is always available at addresses $CM00-$CMFF, where M = [slot number].
 The bootloader can also be seen at addresses $CA00-$CAFF of bank #0000.
 The card is pre-loaded with ProDOS, programs and games. It is bootable and if it is the first boot device encountered, it will boot into ProDOS and a menu will appear of the programs pre-loaded. Tab can be pressed before cold-reset to omit the card from the boot sequence.
