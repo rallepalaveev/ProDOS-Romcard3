@@ -1,0 +1,52 @@
+Name     RomCard3;
+PartNo   00;
+Date     26/02/2023;
+Revision 01;
+Designer R.Palaveev;
+Company  Cltch;
+Assembly None;
+Location None;
+Device   g22v10;
+
+/** Inputs **/
+
+PIN 1 = MemOn;
+PIN 2 = RW;
+PIN 3 = IOStrobe;
+PIN 4 = A0;
+PIN 5 = IOSelect;
+PIN 6 = F0;
+PIN 7 = A8;
+PIN 8 = A9;
+PIN 9 = A10;
+PIN 10 = DevSel;
+
+/** Outputs **/
+
+PIN 14 = CLK_374B;
+PIN 15 = CLK_374A;
+PIN 16 = A7_out;
+PIN 17 = CE_ROM;
+PIN 18 = A8_out;
+PIN 19 = A9_out;
+PIN 20 = WR_STR;
+PIN 21 = DatLo;
+PIN 22 = DatHi;
+PIN 23 = OE374;
+
+/** Intermediate variables **/
+
+CE = (!RW # IOSelect) & (!RW # IOStrobe # MemOn);
+
+/** Logic Equations **/
+
+CE_ROM = CE;
+OE374 = !IOSelect;
+CLK_374A = RW # DevSel # !F0 # A0;
+CLK_374B = RW # DevSel # !F0 # !A0;
+WR_STR = IOStrobe # RW;
+DatLo = CE # A0;
+DatHi = CE # !A0;
+A7_out = A8 & IOSelect;
+A8_out = A9 # !IOSelect;
+A9_out = A10 & IOSelect;
