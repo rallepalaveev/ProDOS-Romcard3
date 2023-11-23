@@ -38,7 +38,6 @@ PIN 23 = OE374;
 
 MemOn = (MemOn & Reset & (IOStrobe # RW)) # !DevSel;
 CE = (!RW # IOSelect) & (!RW # IOStrobe # !MemOn);
-/* CE_ROM = CE; */
 OE374 = !IOSelect;
 CLK_374A = RW # DevSel # !F0 # A0;
 CLK_374B = RW # DevSel # !F0 # !A0;
