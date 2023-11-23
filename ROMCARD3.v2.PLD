@@ -48,4 +48,4 @@ A7_out = A8 & IOSelect;
 A8_out = A9 # !IOSelect;
 A9_out = A10 & IOSelect;
 
-/* For the innitial version: REMOVE 74LS74 and short its pins 1 and 6 */
+/* For the initial version: REMOVE 74LS74 and short its pins 1 and 6 */
