@@ -44,7 +44,7 @@ CLK_374B = RW # DevSel # !F0 # !A0;
 DatLo = CE # A0;
 DatHi = CE # !A0;
 A7_out = A8 & IOSelect;
-A8_out = A9 # !IOSelect;
+A8_out = A9 # OE374;
 A9_out = A10 & IOSelect;
 
 /* For the initial version: REMOVE 74LS74 and short its pins 1 and 6 */
