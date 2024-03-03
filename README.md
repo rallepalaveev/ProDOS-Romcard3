@@ -1,5 +1,5 @@
 # ProDOS-Romcard3
-The ROMcard3 is a card intended tor Apple II computers and is intended to work with a single EPROM 27C322.
+The ROMcard3 is a card intended for Apple II computers and is intended to work with a single EPROM 27C322.
 The ROM is organized in 2048 banks of 2kB each, numbered #0000 to #07FF. Banks are selected by writing 2 bytes (#0000 - #07FF) into $C0N0 and $C0N1, where N = 8 + [slot number], low byte first.
 When writing to $C0Nx at the same time the ROM chip is also enabled. 
 When a bank is selected, its content are seen in the address space $C800-$CFFF To de-enable the ROM chip a write must be performed to any address $C800-$CFFF or reset executed.
@@ -11,7 +11,7 @@ V2 removes the 74LS74. This functionality is performed by the PLD v2. The origin
 
 Copyright (c) 2023 Ralle Palaveev All rights reserved.
 
-Redistribution and use in source, binary, and manufactued forms, with or without modification, are permitted provided that the following conditions are met:
+Redistribution and use in source, binary, and manufactured forms, with or without modification, are permitted provided that the following conditions are met:
 
 Redistributions of source code and design files must retain the above copyright notice, this list of conditions and the following disclaimer.
 Redistributions in binary or manufactured form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
