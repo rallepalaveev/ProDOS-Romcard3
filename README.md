@@ -1,6 +1,6 @@
 # ProDOS-Romcard3
 ROMcard3 is a card for Apple II computers and is intended to work with a single EPROM 27C322 - the largest parallel UV EPROM ever produced.
-The ROM is organized in 2048 banks of 2kB each, numbered #0000 to #07FF. Banks are selected by writing 2 bytes (#0000-#07FF) into $C0N0 and $C0N1, where N = 8 + [slot number], in the order LSB, then MSB.
+The ROM card is organized in 2048 banks of 2kB each, numbered #0000 to #07FF. Banks are selected by writing 2 bytes (#0000-#07FF) into $C0N0 and $C0N1, where N = 8 + [slot number], in the order LSB, then MSB.
 Writing to $C0Nx at the same time activates the the ROM chip.
 When a bank is selected, its content are seen in the address space $C800-$CFFF To de-enable the ROM chip a write must be performed to any address $C800-$CFFF or reset executed.
 If a user program is accessing the card, it is important that at the end a write is performed to $C800-$CFFF so that the card is deactivated and does not conflict with other hardware, which is using the same address space.
